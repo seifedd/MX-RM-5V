@@ -15,15 +15,13 @@ void setup() {
   //virtual library RF setup
   vw_set_rx_pin(11);//RXpin
   vw_setup(4000); //bps
-  //init ledPin 8
-  pinMode(ledPin, OUTPUT);
+  //init virtual wire library rx part.
   vw_rx_start();
 }
 
 void loop() {
   if(vw_get_message(message, &messageLength)){
-    digitalWrite(LED_BUILTIN, HIGH); 
- 
+   
     Serial.print("received: ");
     for(int i=0;i<messageLength;i++){
     Serial.write(message [i]);
@@ -31,7 +29,7 @@ void loop() {
     }
     j++;
     Serial.println(j);
-    digitalWrite(LED_BUILTIN, LOW);
+    
     
  }
 
