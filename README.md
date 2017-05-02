@@ -21,13 +21,15 @@ a simple RF Transmitter-receiver module , Which is used in Remote control for ca
      A picture is provided.
      
  # Pin connection with Arduino Uno or compatible boards:
-   RX/
+   RX:
+   
    GND  <--->GND
    VCC <---> 5V
    DATA(next to VCC <--->pin 11
    the other pin shouldn't be connected.
    
-   TX/
+   TX:
+   
    GND  <--->GND
    VCC <---> 5V
    DATA <--->pin 12
